@@ -43,8 +43,8 @@ public class AOPConfig {
 	}
 	
 	
-	//Here @Before is the advice and execution(* com.uday.springcrudopr.*.*.*(..) )"
-	//@Before("execution(* com.uday.springcrudopr.*.*.*(..) )") This is combinely called pointcut
+	//Here @Before is called advice and execution(* com.uday.springcrudopr.*.*.*(..) ) is called pointcut"
+	//@Before("execution(* com.uday.springcrudopr.*.*.*(..) )") This is combinely called joinpoint
 	@Before("execution(* com.uday.springcrudopr.*.*.*(..) )")
 	public void loggingAdvice(JoinPoint joinPoint){
 		System.out.println("Before running loggingAdvice on method="+joinPoint.toString());
